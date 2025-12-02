@@ -3,8 +3,8 @@ Testcases for changes to CairoSVG's mechanism for path angles and markers.
 Column explanation:
 * **[Inkscape](https://inkscape.org/)**'s PNG export and **Firefox** Screenshots as a reference
 * **Kozea**: current version of the [original CairoSVG library](https://github.com/Kozea/CairoSVG)
-* **AgC/main**: this repo's [`main`](https://github.com/SilverCardioid/CairoSVG/) branch, my own work-in-progress fork of CairoSVG (not included below)
-* **AgC/master**: the [`master`](https://github.com/SilverCardioid/CairoSVG/tree/master) branch, used for proposing minor changes to Kozea/CairoSVG and otherwise kept in sync with it
+* **AgC/main**: this repo's [`main`](https://github.com/Cardioid3/CairoSVG/) branch, my own work-in-progress fork of CairoSVG (not included below)
+* **AgC/master**: the [`master`](https://github.com/Cardioid3/CairoSVG/tree/master) branch, used for proposing minor changes to Kozea/CairoSVG and otherwise kept in sync with it
 
 The rightmost images are visualisations of the `node.vertices` array, which is internally used for the marker positions and angles. For each vertex, the calculated direction of the outgoing path segment is green, and that of the incoming segment (pointing away from it) is purple. Grey means the two overlap.
 
@@ -52,7 +52,7 @@ Contrary to what I originally assumed, Firefox actually also draws two overlappi
 The seemingly missing markers in the top left and bottom right of the Inkscape image are due to an inconsistency in the drawing order. Whereas Firefox and AgC/master draw overlapping markers in order of appearance in the path (i.e., start below mid, mid below end), Inkscape places the purple start marker on top of the smaller green mid marker (and likewise for mid and end). The specification isn't clear on this as far as I can see, although the former behaviour seems more sensible.
 
 ## Marker size & gradients
-[I removed](https://github.com/SilverCardioid/CairoSVG/commit/0835fc88780de1272eeb9181a02986d4289146cc) a section of code that scales markers based on their bounding box after noticing the testcase in the previous section was mistakenly drawn with equally sized markers. This part was [added in 2016](https://github.com/Kozea/CairoSVG/pull/89) in a series of edits relating to gradients, though what exact problem it was intended to fix isn't clear to me. This testcase renders the gradient on the markers correctly.
+[I removed](https://github.com/Cardioid3/CairoSVG/commit/0835fc88780de1272eeb9181a02986d4289146cc) a section of code that scales markers based on their bounding box after noticing the testcase in the previous section was mistakenly drawn with equally sized markers. This part was [added in 2016](https://github.com/Kozea/CairoSVG/pull/89) in a series of edits relating to gradients, though what exact problem it was intended to fix isn't clear to me. This testcase renders the gradient on the markers correctly.
 |     |     |
 | :-: | :-: |
 | ![](gradient-ink.png)<br/>**Inkscape** | ![](gradient-kozea.png)<br/>**Kozea** |

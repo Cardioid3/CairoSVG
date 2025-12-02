@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:bar="http://www.w3.org/1999/xlink" xmlns:card="https://silvercardioid.github.io" width="600" height="600" xml:lang="en">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:bar="http://www.w3.org/1999/xlink" xmlns:card="https://cardioid3.github.io" width="600" height="600" xml:lang="en">
 <rect width="600" height="600" fill="#fff" card:foo="bar"/>
 <rect id="bar" width="180" height="600" x="80" fill="#000"/>
 <use bar:href="#bar" x="260"/>

@@ -2,8 +2,8 @@
 A work-in-progress fork of the vector graphics converter [CairoSVG](https://github.com/Kozea/CairoSVG/). It is intended to be a more modular version of the library, allowing its drawing functionality to be used directly from a script in addition to its original purpose of parsing and converting SVG files.
 
 Other branches and related repositories:
-* [CairoSVG/master](https://github.com/SilverCardioid/CairoSVG/tree/master/): for proposed changes to the original library
-* [Cairopath](https://github.com/SilverCardioid/cairopath): my previous attempt at a vector graphics module
+* [CairoSVG/master](https://github.com/Cardioid3/CairoSVG/tree/master/): for proposed changes to the original library
+* [Cairopath](https://github.com/Cardioid3/cairopath): my previous attempt at a vector graphics module
 
 ## Features
 * A class for each element, with methods for modifying attributes, adding child nodes and navigating the XML tree.
@@ -13,7 +13,7 @@ Other branches and related repositories:
 * Basic SVG file reading, output to SVG and formats supported by Cairo and OpenCV (PDF, PostScript, PNG, other image formats), and displaying the image in a popup window using OpenCV.
 
 ## Todos
-* A new name to avoid conflicts with the original library ([suggestions](https://github.com/SilverCardioid/CairoSVG/discussions) are welcome!)
+* A new name to avoid conflicts with the original library ([suggestions](https://github.com/Cardioid3/CairoSVG/discussions) are welcome!)
 * Text nodes and elements, mask (included but not yet displaying correctly), gradients, markers, animation.
 * CSS and `style` attributes.
 * Custom shapes like regular polygons and stars, saved as a <code>&lt;path/&gt;</code> with custom namespace attributes (like e.g. [Inkscape](https://inkscape-manuals.readthedocs.io/en/latest/stars-and-polygons.html) does).
